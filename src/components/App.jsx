@@ -17,7 +17,12 @@
 
     addReminder(){
       console.log(this.state.dueDate);
-      this.props.addReminder(this.state.text,this.state.dueDate);
+      if(this.state.dueDate === ""){
+
+      }
+      else{
+        this.props.addReminder(this.state.text,this.state.dueDate);
+      }
     }
 
     deleteReminder(id){
